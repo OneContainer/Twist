@@ -822,7 +822,7 @@ ssserver_start() {
         echo -e "# \033[32;1mShadowsocks-libev is Running... \033[0m"
         return 0
     fi
-    ${ssserverpath} -uv -c /etc/shadowsocks-libev/config.json -f /var/run/shadowsocks-libev.pid
+    ${ssserverpath} -uv6 -c /etc/shadowsocks-libev/config.json -f /var/run/shadowsocks-libev.pid
     [ -e /var/log/twistprotect ] || touch /var/log/twistprotect
     if ssserver_check; then
         echo -e "# \033[32;1mStarting Shadowsocks-libev Success... \033[0m"
